@@ -1,5 +1,5 @@
---- a/CMakeLists.txt	2018-10-17 21:08:21.000000000 -0600
-+++ b/new.txt	2018-12-27 01:41:17.123275626 -0600
+--- a/CMakeLists.txt	2019-02-15 13:43:46.000000000 -0600
++++ b/CMakeLists-new.txt	2019-02-18 13:35:17.685723475 -0600
 @@ -10,7 +10,7 @@
  endif()
  
@@ -8,4 +8,4 @@
 +    set(INSTALL_LIBDIR ${CMAKE_INSTALL_PREFIX}/lib64)
  endif()
  
- set(INSTALL_INCLUDEDIR ${CMAKE_INSTALL_PREFIX}/include/ldac)
+ if("${INSTALL_INCLUDEDIR}" STREQUAL "")
