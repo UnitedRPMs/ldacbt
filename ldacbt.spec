@@ -9,6 +9,8 @@ Patch:		lib_fix.patch
 
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
+# Why we need fix conflicts of others third party repos?
+Provides:	libldac = %{version}
 
 %description
 AOSP libldac dispatcher.
@@ -16,6 +18,7 @@ AOSP libldac dispatcher.
 %package        devel
 Summary:        Development package for ldacbt
 Requires:       %{name} = %{version}-%{release}
+Provides:	libldac-devel = %{version}
 
 %description    devel
 This package contains development files for ldacbt
