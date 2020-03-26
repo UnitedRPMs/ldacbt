@@ -1,10 +1,10 @@
 Name:           ldacbt
 Summary:        AOSP libldac dispatcher
 Version:        2.0.2.3
-Release:        1%{?dist}
+Release:        7%{?dist}
 License:        Apache
 URL:            https://github.com/EHfive/ldacBT/
-Source:		https://github.com/EHfive/ldacBT/releases/download/v%{version}/ldacBT-%{version}.tar.gz
+Source:	https://github.com/EHfive/ldacBT/releases/download/v%{version}/ldacBT-%{version}.tar.gz
 Patch:		lib_fix.patch
 
 BuildRequires:  cmake
@@ -58,6 +58,9 @@ This package contains development files for ldacbt
 
 
 %changelog
+
+* Wed Mar 25 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 2.0.2.3-7
+- Rebuilt
 
 * Mon Feb 18 2019 Unitedrpms Project <unitedrpms AT protonmail DOT com> 2.0.2.3-1
 - Updated to 2.0.2.3

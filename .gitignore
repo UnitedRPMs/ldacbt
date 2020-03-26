@@ -5,3 +5,4 @@ SPECS/*
 SRPMS/*
 ldac*.tar.gz
 .directory
+*.rpm
