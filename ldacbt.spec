@@ -1,3 +1,5 @@
+#global debug_package %{nil}
+
 Name:           ldacbt
 Summary:        AOSP libldac dispatcher
 Version:        2.0.2.3
@@ -34,15 +36,14 @@ This package contains development files for ldacbt
 
 %build
 
-%cmake \
-        -DCMAKE_BUILD_TYPE=Release \
+mkdir -p %{_target_platform}
+%cmake  -B %{_target_platform} -DCMAKE_BUILD_TYPE=Release \
         -DLDAC_SOFT_FLOAT=OFF \
-        .
-    make
+
+%make_build -C %{_target_platform}
 
 %install
-
-%make_install
+%make_install -C %{_target_platform}
 
 
 %files
